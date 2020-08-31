@@ -41,4 +41,12 @@ func main() {
 	for i,v := range s8 {
 		fmt.Printf("%d,%c,%v\n", i,v,v)
 	}
+
+	//乘法table
+	for  i :=1; i<10; i++{
+		for j :=1; j<=i; j++{
+			fmt.Printf("%d * %d=%d \t", j, i, j * i)
+		}
+		fmt.Println()
+	}
 }
