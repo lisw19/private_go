@@ -49,4 +49,33 @@ func main() {
 		}
 		fmt.Println()
 	}
+
+	// 跳出循环
+	for z :=0; z < 20; z++ {
+		// if z == 5 {
+		// 	break
+		// }
+		if z == 5 {
+			continue
+		}
+		fmt.Println(z)
+
+	}
+	fmt.Printf("for z over\n")
+
+	//switch 
+	var nn = 5
+	switch nn {
+	case 1:
+		fmt.Println(1)
+	case 2:
+		fmt.Println(2)
+	case 5:
+		fmt.Println(4)
+		fallthrough //兼容下一个条件
+	default:
+		fmt.Println("9")
+	}
+
+	
 }
