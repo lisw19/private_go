@@ -12,6 +12,7 @@ func main()  {
 	a["m"] = 34
 	fmt.Println(a) //map[age:1 m:34]
 	//取值
+
 	fmt.Println(a["age"])  //1
 	// 如果key不存在 会拿到对应类型零值
 	i, ok := a["mm"]
@@ -27,9 +28,16 @@ func main()  {
 		fmt.Println(k, v)
 	}
 
-	//删除key
+	//删除key 删除不存在的key 不会报错
 	delete(a, "m")
 	fmt.Println(a) //map[age:1]
 
-	//删除不存在的key 不会报错
+	// var s1 = make([]map[int]string, 2, 20)
+	// s1[0][100] = "a"
+	// fmt.Println(s1) //没对map初始化  assignment to entry in nil map
+	var s1 = make([]map[int]string, 10, 20)
+	s1[0] = make(map[int]string, 5)
+	s1[0][100] = "a"
+	fmt.Println(s1) //[map[100:a] map[] map[] map[] map[] map[] map[] map[] map[] map[]]
+
 }
