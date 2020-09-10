@@ -37,13 +37,42 @@ func f2() (y int) {
 	return x
 }
 
-func main()  {
-	fmt.Println("defer 关键字练习")
-	base_defer()
-	var a int = f1()
-	fmt.Println(a) //6  
-	
-	a1 := f2()
-	fmt.Println(a1) //5 
+
+func b(){
+    for i := 0; i < 4; i++ {
+		fmt.Println("defer", i)
+
+        defer fmt.Println(i)
+    }
 }
 
+// func main()  {
+// 	fmt.Println("defer 关键字练习")
+// 	base_defer()
+// 	var a int = f1()
+// 	fmt.Println(a) //6  
+	
+// 	a1 := f2()
+// 	fmt.Println(a1) //5 
+// 	fmt.Println("******")
+// 	b()
+// 	var d int = 0
+// 	fmt.Println(&d)
+// }
+
+func main() {
+
+	slice := []int{0,1,2,3}
+	m := make(map[int]*int)
+
+	for key,val := range slice {
+		// fmt.Println(val)
+		var val = val
+		// val := val
+		m[key] = &val
+	}
+	fmt.Println(m)
+   for k,v := range m {
+	   fmt.Println(k,"->",*v)
+   }
+}
