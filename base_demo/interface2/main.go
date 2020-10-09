@@ -42,4 +42,7 @@ func main() {
 	l := chicken{color: "yellow", feet: 2}
 	a1 = l
 	a1.eat("蚯蚓")
+	//接口储存分为两部分，值得动态类型和动态值，
+	//这样实现了接口变量能储存不同的值
+	fmt.Printf("%T", a1) //main.chicken
 }
