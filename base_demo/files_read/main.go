@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-const paht string = "/Users/lishiwei/Workspace/GO/src/private_go/base_demo/read_files/a.txt"
+const paht string = "/Users/lishiwei/Workspace/GO/src/private_go/base_demo/files_read/a.txt"
 
 // 利用bufio这个包读取文件
 func redadByBufil() {
