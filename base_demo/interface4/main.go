@@ -32,6 +32,7 @@ func main() {
 		"Tom",
 	}
 	cat1.move()
+	cat1.eat()
 	a1 = cat1
 	a1.eat()
 
