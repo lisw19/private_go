@@ -1,2 +1,2 @@
 # private_go
-＃＃＃走练习
+＃＃＃study go lang test
