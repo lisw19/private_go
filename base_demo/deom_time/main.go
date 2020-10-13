@@ -48,7 +48,15 @@ func main() {
 	fmt.Println(timeObj.Date())
 
 	//sub 时间间隔
-	nextyear, err2 := time.Parse("2006-01-02 15:04:05", "2020-10-13 20:00:00")
+
+	loc, errl := time.LoadLocation("Asia/Shanghai")
+	if errl != nil {
+		fmt.Println("LoadLocation error")
+		return
+	}
+	//按照指定时区解析时间格式
+	//nextyear, err2 := time.Parse("2006-01-02 15:04:05", "2020-10-13 20:00:00")
+	nextyear, err2 := time.ParseInLocation("2006-01-02 15:04:05", "2020-10-13 20:00:00", loc)
 	if err2 != nil {
 		fmt.Println("time.Parse error")
 		return
@@ -58,7 +66,7 @@ func main() {
 	jiange := nextyear.Sub(now)
 	fmt.Println(jiange)
 	fmt.Println("********1")
-	time.Sleep(time.Minute)
+	time.Sleep(time.Second * 10)
 	fmt.Println("********2")
 
 }
