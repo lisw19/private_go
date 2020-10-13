@@ -1,2 +1,2 @@
 # private_go
-＃＃＃study go lang test
+study go lang test
