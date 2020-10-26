@@ -6,11 +6,12 @@ import (
 )
 
 func main() {
-	log := mylog.NewLog()
+	log := mylog.NewLog("Error")
 	for true {
-		log.Debug("debug log")
-		log.Info("info log")
-		log.Warning("info log")
+		log.Debug("这是一条debug日志")
+		log.Info("这是一条info日志")
+		log.Warning("这是一条waring日志")
+		log.ERROR("这是一条erroe日志")
 		time.Sleep(time.Second * 2)
 	}
 
