@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	log := mylog.NewLog("Error")
+	log := mylog.NewLog("Info")
 	for true {
 		log.Debug("这是一条debug日志")
 		log.Info("这是一条info日志")
@@ -14,5 +14,4 @@ func main() {
 		log.ERROR("这是一条erroe日志")
 		time.Sleep(time.Second * 2)
 	}
-
 }
