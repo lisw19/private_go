@@ -13,8 +13,10 @@ func main() {
 	// go中小数默认是64位
 	a2 := 1.22345
 	fmt.Printf("%T\n", a2)
-	const (a3 int = 111
-	a4 int = 222)
+	const (
+		a3 int = 111
+		a4 int = 222
+	)
 	fmt.Println(a3)
 	// fmt 总结
 	fmt.Printf("%T\n", a4)
@@ -51,15 +53,15 @@ func main() {
 	fmt.Println(strings.Join(strings.Split(ss1, "s"), "*"))
 	//获取下标
 	ss2 := "abcdefa"
-	fmt.Println(strings.Index(ss2, "a")) //0
+	fmt.Println(strings.Index(ss2, "a"))     //0
 	fmt.Println(strings.LastIndex(ss2, "a")) // 6
-	for i := 0; i< len(ss2); i++{
+	for i := 0; i < len(ss2); i++ {
 		fmt.Println("for loop")
 		fmt.Print(ss2[i])
 		fmt.Printf("%c\n", ss2[i])
 	}
 
-	for cc, ccc := range ss2{
+	for cc, ccc := range ss2 {
 		fmt.Println(cc, ccc)
 	}
 	// 字符串修改
@@ -79,7 +81,5 @@ func main() {
 	fmt.Println(float64(f1))
 	fmt.Println(int(f))
 	// fmt.Println(float32(f2))
-
-
 
 }
